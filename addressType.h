@@ -8,17 +8,17 @@ using namespace std;
 class addressType
 {
 public:
-	void setAddress(string a)
+	void setAddress(string a) //sets the address
 	{
-		address = a;
+		address = a; 
 	}
 
-	void setCity(string c)
+	void setCity(string c) //sets the city
 	{
 		city = c;
 	}
 
-	void setState(string s)
+	void setState(string s) //sets the state, defaults to XX
 	{
 		if (s.length() != 2)
 		{
@@ -30,7 +30,7 @@ public:
 		}
 	}
 
-	void setZipcode(int z)
+	void setZipcode(int z) //sets the zip code between 11111 and 99999, defaults to 10000
 	{
 		if (z <= 99999 && z >= 11111) 
 		{
@@ -43,28 +43,28 @@ public:
 	}
 
 
-	string getAddress() 
+	string getAddress() //returns the address value
 	{
 		return address;
 	}
 
-	string getCity()
+	string getCity() //returns the city value
 	{
 		return city;
 	}
 
-	string getState()
+	string getState() //returns the state value
 	{
 		return state;
 	}
 
-	int getZipcode()
+	int getZipcode() //returns the zip code
 	{
 		return zipcode;
 	}
 
-
-	void print()
+	
+	void print() //prints the data out
 	{
 		cout << this->address << endl << this->city << " " << this->state << ", " << this->zipcode << endl;
 	}
